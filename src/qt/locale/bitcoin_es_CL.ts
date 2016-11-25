@@ -278,8 +278,8 @@ Eric Young (eay@cryptsoft.com) y UPnP software escrito por Thomas Bernard.</tran
     </message>
     <message>
         <location line="-56"/>
-        <source>Emerald will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your litecoins from being stolen by malware infecting your computer.</source>
-        <translation>Emerald se cerrará para finalizar el proceso de encriptación. Recuerde que encriptar su billetera no protegera completatamente sus litecoins de ser robados por malware que infecte su computador</translation>
+        <source>Emerald will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your emeralds from being stolen by malware infecting your computer.</source>
+        <translation>Emerald se cerrará para finalizar el proceso de encriptación. Recuerde que encriptar su billetera no protegera completatamente sus emeralds de ser robados por malware que infecte su computador</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -423,12 +423,12 @@ Eric Young (eay@cryptsoft.com) y UPnP software escrito por Thomas Bernard.</tran
     <message>
         <location line="-347"/>
         <source>Send coins to a Emerald address</source>
-        <translation>Enviar monedas a una dirección litecoin</translation>
+        <translation>Enviar monedas a una dirección emerald</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Modify configuration options for Emerald</source>
-        <translation>Modifica las opciones de configuración de litecoin</translation>
+        <translation>Modifica las opciones de configuración de emerald</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1072,7 +1072,7 @@ Dirección: %4</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start litecoin: click-to-pay handler</source>
+        <source>Cannot start emerald: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -2200,8 +2200,8 @@ Dirección: %4</translation>
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or litecoind</source>
-        <translation>Envia comando a litecoin lanzado con -server u litecoind
+        <source>Send command to -server or emeraldd</source>
+        <translation>Envia comando a emerald lanzado con -server u emeraldd
 </translation>
     </message>
     <message>
@@ -2224,14 +2224,14 @@ Dirección: %4</translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: litecoin.conf)</source>
-        <translation>Especifica archivo de configuración (predeterminado: litecoin.conf)
+        <source>Specify configuration file (default: emerald.conf)</source>
+        <translation>Especifica archivo de configuración (predeterminado: emerald.conf)
 </translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: litecoind.pid)</source>
-        <translation>Especifica archivo pid (predeterminado: litecoin.pid)
+        <source>Specify pid file (default: emeraldd.pid)</source>
+        <translation>Especifica archivo pid (predeterminado: emerald.pid)
 </translation>
     </message>
     <message>
@@ -2313,7 +2313,7 @@ Dirección: %4</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=litecoinrpc
+rpcuser=emeraldrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.

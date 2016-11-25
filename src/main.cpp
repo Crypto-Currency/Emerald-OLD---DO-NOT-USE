@@ -4575,7 +4575,7 @@ void static EmeraldMiner(CWallet *pwallet)
 {
     printf("EmeraldMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    RenameThread("litecoin-miner");
+    RenameThread("emerald-miner");
 
     // Each thread has its own key and counter
     CReserveKey reservekey(pwallet);

@@ -274,8 +274,8 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     </message>
     <message>
         <location line="-56"/>
-        <source>Emerald will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your litecoins from being stolen by malware infecting your computer.</source>
-        <translation>Emerald dabar užsidarys šifravimo proceso pabaigai. Atminkite, kad piniginės šifravimas negali pilnai apsaugoti litecoinų vagysčių kai tinkle esančios kenkėjiškos programos patenka į jūsų kompiuterį.</translation>
+        <source>Emerald will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your emeralds from being stolen by malware infecting your computer.</source>
+        <translation>Emerald dabar užsidarys šifravimo proceso pabaigai. Atminkite, kad piniginės šifravimas negali pilnai apsaugoti emeraldų vagysčių kai tinkle esančios kenkėjiškos programos patenka į jūsų kompiuterį.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -424,7 +424,7 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     <message>
         <location line="+49"/>
         <source>Modify configuration options for Emerald</source>
-        <translation>Keisti litecoin konfigūracijos galimybes</translation>
+        <translation>Keisti emerald konfigūracijos galimybes</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1067,7 +1067,7 @@ Adresas: %4</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start litecoin: click-to-pay handler</source>
+        <source>Cannot start emerald: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -2195,8 +2195,8 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or litecoind</source>
-        <translation>Siųsti komandą serveriui arba litecoind</translation>
+        <source>Send command to -server or emeraldd</source>
+        <translation>Siųsti komandą serveriui arba emeraldd</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2215,13 +2215,13 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: litecoin.conf)</source>
-        <translation>Nurodyti konfigūracijos failą (pagal nutylėjimąt: litecoin.conf)</translation>
+        <source>Specify configuration file (default: emerald.conf)</source>
+        <translation>Nurodyti konfigūracijos failą (pagal nutylėjimąt: emerald.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: litecoind.pid)</source>
-        <translation>Nurodyti pid failą (pagal nutylėjimą: litecoind.pid)</translation>
+        <source>Specify pid file (default: emeraldd.pid)</source>
+        <translation>Nurodyti pid failą (pagal nutylėjimą: emeraldd.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2298,7 +2298,7 @@ Adresas: %4</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=litecoinrpc
+rpcuser=emeraldrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
