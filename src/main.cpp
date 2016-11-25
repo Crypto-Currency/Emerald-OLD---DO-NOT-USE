@@ -35,7 +35,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2");
+uint256 hashGenesisBlock("0xb297ecb2a87e6a306d0c2bbdbd0402cbb53368c74ac9ed2296c4a7815e599f1c");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // Emerald: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -1087,16 +1087,58 @@ uint256 static GetOrphanRoot(const CBlockHeader* pblock)
 
 int64 static GetBlockValue(int nHeight, int64 nFees)
 {
-    int64 nSubsidy = 50 * COIN;
+    int64 nSubsidy = 0.1 * COIN;
 
-    // Subsidy is cut in half every 840000 blocks, which will occur approximately every 4 years
-    nSubsidy >>= (nHeight / 840000); // Emerald: 840k blocks in ~4 years
+    if(nHeight == 1)
+    {
+        nSubsidy = 400000 * COIN;
+    }
+    else if(nHeight < 401)
+    {
+        nSubsidy = 0 * COIN;
+    }
+    else if(nHeight < 701)   
+    {
+        nSubsidy = 1 * COIN;
+    }
+    else if(nHeight < 1001)   
+    {
+        nSubsidy = 2 * COIN;
+    }
+	else if(nHeight < 1301)   
+    {
+        nSubsidy = 3 * COIN;
+    }
+	else if(nHeight < 1601)   
+    {
+        nSubsidy = 4 * COIN;
+    }
+    else if(nHeight < 3110401)   
+    {
+        nSubsidy = 5 * COIN;
+    }
+	else if(nHeight < 3888001)   
+    {
+        nSubsidy = 2.5 * COIN;
+    }
+	else if(nHeight < 4665601)   
+    {
+        nSubsidy = 1 * COIN;
+    }
+	else if(nHeight < 5443201)   
+    {
+        nSubsidy = 0.5 * COIN;
+    }
+	else if(nHeight < 6220801)   
+    {
+        nSubsidy = 0.25 * COIN;
+    }
 
     return nSubsidy + nFees;
 }
 
-static const int64 nTargetTimespan = 3.5 * 24 * 60 * 60; // Emerald: 3.5 days
-static const int64 nTargetSpacing = 2.5 * 60; // Emerald: 2.5 minutes
+static const int64 nTargetTimespan = 60 * 60; // Emerald: 1 hour
+static const int64 nTargetSpacing = 20;       // Emerald: 20 seconds
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 
 //
@@ -2746,7 +2788,7 @@ bool LoadBlockIndex()
         pchMessageStart[1] = 0xc1;
         pchMessageStart[2] = 0xb7;
         pchMessageStart[3] = 0xdc;
-        hashGenesisBlock = uint256("0xf5ae71e26c74beacc88382716aced69cddf3dffff24f384e1808905e0188f68f");
+        hashGenesisBlock = uint256("0x893f3509f074447e18e387f173a9d1773df4089a6121023a669c499b588869c9");
     }
 
     //
@@ -2779,34 +2821,38 @@ bool InitBlockIndex() {
         //   vMerkleTree: 97ddfbbae6
 
         // Genesis block
-        const char* pszTimestamp = "NY Times 05/Oct/2011 Steve Jobs, Apple’s Visionary, Dies at 56";
+        const char* pszTimestamp = "Sat Jun 15, 2013 1:41pm EDT: Moderate Rohani wins Iran presidential election in landslide";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
-        txNew.vout[0].nValue = 50 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
+        txNew.vout[0].nValue = 0 * COIN;
+ 		txNew.vout[0].scriptPubKey = CScript() << ParseHex("040abc710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
         CBlock block;
         block.vtx.push_back(txNew);
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1317972665;
+        block.nTime    = 1371322084;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 2084524493;
+        block.nNonce   = 113555777;
 
         if (fTestNet)
         {
-            block.nTime    = 1317798646;
-            block.nNonce   = 385270584;
+            block.nTime    = 1370718146;
+            block.nNonce   = 110784949;
         }
 
         //// debug print
+        printf("block.GetHash() = %s\n", block.GetHash().ToString().c_str());
+        printf("block.hashMerkleRoot = %s\n", block.hashMerkleRoot.ToString().c_str());
+
         uint256 hash = block.GetHash();
-        printf("%s\n", hash.ToString().c_str());
-        printf("%s\n", hashGenesisBlock.ToString().c_str());
-        printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0x97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9"));
+        printf("hash to string  %s\n", hash.ToString().c_str());
+        printf("hash genesis bk %s\n", hashGenesisBlock.ToString().c_str());
+        printf("hash merkle rt  %s\n", block.hashMerkleRoot.ToString().c_str());
+
+        assert(block.hashMerkleRoot == uint256("0xa66be980713959b05c01a408aac595e3f5ed029eace6e053c553cf2129ca4c92"));
         block.print();
         assert(hash == hashGenesisBlock);
 
