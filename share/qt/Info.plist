@@ -3,7 +3,7 @@
 <plist version="0.9">
 <dict>
 	<key>CFBundleIconFile</key>
-	<string>litecoin.icns</string>
+	<string>emerald.icns</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleGetInfoString</key>
@@ -17,17 +17,17 @@
 	<key>CFBundleExecutable</key>
 	<string>Emerald-Qt</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.litecoin.Emerald-Qt</string>
+	<string>org.emerald.Emerald-Qt</string>
         <key>CFBundleURLTypes</key>
         <array>
           <dict>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
-            <string>org.litecoin.EmeraldPayment</string>
+            <string>org.emerald.EmeraldPayment</string>
             <key>CFBundleURLSchemes</key>
             <array>
-              <string>litecoin</string>
+              <string>emerald</string>
             </array>
           </dict>
         </array>

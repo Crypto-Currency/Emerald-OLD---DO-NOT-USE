@@ -84,6 +84,6 @@ Emerald
 -------
 MSYS shell:
 
-	cd \litecoin\src
+	cd \emerald\src
 	mingw32-make -f makefile.mingw
-	strip litecoind.exe
+	strip emeraldd.exe
