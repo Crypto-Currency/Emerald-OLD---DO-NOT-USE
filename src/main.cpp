@@ -1245,13 +1245,14 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits)
         return error("CheckProofOfWork() : nBits below minimum work");
 
 
-printf("CheckProofOfWork: nBits=%d\n",nBits);
-printf("CheckProofOfWork: hash=%d\n",hash);
-printf("CheckProofOfWork: bnTarget=%d\n",bnTarget.getuint256());
+//printf("CheckProofOfWork: nBits=%d\n",nBits);
+//printf("CheckProofOfWork: hash=%d\n",hash);
+//printf("CheckProofOfWork: bnTarget=%d\n",bnTarget.getuint256());
 
     // Check proof of work matches claimed amount
-//    if (hash > bnTarget.getuint256())
+    if (hash > bnTarget.getuint256())
 //        return error("CheckProofOfWork() : hash doesn't match nBits");
+      printf("CheckProofOfWork() : hash doesn't match nBits\n");
 
     return true;
 }
