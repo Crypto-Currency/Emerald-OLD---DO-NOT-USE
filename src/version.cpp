@@ -8,7 +8,7 @@
 // Name of client reported in the 'version' message. Report the same name
 // for both bitcoind and bitcoin-qt, to make it harder for attackers to
 // target servers or GUI users specifically.
-const std::string CLIENT_NAME("Satoshi");
+const std::string CLIENT_NAME("Emerald");
 
 // Client version number
 #define CLIENT_VERSION_SUFFIX   "-beta"
@@ -37,7 +37,7 @@ const std::string CLIENT_NAME("Satoshi");
 #define GIT_ARCHIVE 1
 #ifdef GIT_ARCHIVE
 #    define GIT_COMMIT_ID "9cffb23"
-#    define GIT_COMMIT_DATE "Mon, 12 Jan 2015 16:55:18 -1000"
+#    define GIT_COMMIT_DATE "Nov. 25 2016"
 #endif
 
 #define BUILD_DESC_FROM_COMMIT(maj,min,rev,build,commit) \
