@@ -1,7 +1,7 @@
 Emerald integration/staging tree
 ================================
 
-http://www.Emerald.co
+http://EmeraldCrypto.co
 
 Copyright (c) 2009-2014 Bitcoin Developers
 Copyright (c) 2011-2014 Litecoin Developers
