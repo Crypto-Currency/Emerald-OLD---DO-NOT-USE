@@ -87,11 +87,12 @@ static bool ThreadSafeAskFee(int64 nFeeRequired)
     return payFee;
 }
 
+// find splash font color here
 static void InitMessage(const std::string &message)
 {
     if(splashref)
     {
-        splashref->showMessage(QString::fromStdString(message), Qt::AlignBottom|Qt::AlignHCenter, QColor(55,55,55));
+        splashref->showMessage(QString::fromStdString(message), Qt::AlignBottom|Qt::AlignHCenter, QColor(213,251,109));
         qApp->processEvents();
     }
     printf("init message: %s\n", message.c_str());

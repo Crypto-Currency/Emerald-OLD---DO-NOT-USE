@@ -14,11 +14,11 @@ SplashScreen::SplashScreen(const QPixmap &pixmap, Qt::WindowFlags f) :
     QSplashScreen(pixmap, f)
 {
     // set reference point, paddings
-    int paddingLeftCol2         = 230;
-    int paddingTopCol2          = 376;
-    int line1 = 0;
-    int line2 = 13;
-    int line3 = 26;
+    int paddingLeftCol2         = 10;//210;
+    int paddingTopCol2          = 420;//356;
+    int line1 = 20;//0;
+    int line2 = 33;//13;
+    int line3 = 46;//26;
 
     float fontFactor            = 1.0;
 
@@ -40,7 +40,8 @@ SplashScreen::SplashScreen(const QPixmap &pixmap, Qt::WindowFlags f) :
     }
 
     QPainter pixPaint(&newPixmap);
-    pixPaint.setPen(QColor(70,70,70));
+//    pixPaint.setPen(QColor(70,70,70));
+    pixPaint.setPen(QColor(213,251,109));
 
     pixPaint.setFont(QFont(font, 9*fontFactor));
     pixPaint.drawText(paddingLeftCol2,paddingTopCol2+line3,versionText);
