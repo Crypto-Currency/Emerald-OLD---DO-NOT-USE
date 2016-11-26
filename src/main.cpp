@@ -1244,9 +1244,14 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits)
     if (bnTarget <= 0 || bnTarget > bnProofOfWorkLimit)
         return error("CheckProofOfWork() : nBits below minimum work");
 
+
+printf("CheckProofOfWork: nBits=%d\n",nBits);
+printf("CheckProofOfWork: hash=%d\n",hash);
+printf("CheckProofOfWork: bnTarget=%d\n",bnTarget.getuint256());
+
     // Check proof of work matches claimed amount
-    if (hash > bnTarget.getuint256())
-        return error("CheckProofOfWork() : hash doesn't match nBits");
+//    if (hash > bnTarget.getuint256())
+//        return error("CheckProofOfWork() : hash doesn't match nBits");
 
     return true;
 }
@@ -2145,6 +2150,7 @@ bool CBlock::CheckBlock(CValidationState &state, bool fCheckPOW, bool fCheckMerk
         return state.DoS(100, error("CheckBlock() : size limits failed"));
 
     // Emerald: Special short-term limits to avoid 10,000 BDB lock limit:
+/*
     if (GetBlockTime() < 1376568000)  // stop enforcing 15 August 2013 00:00:00
     {
         // Rule is: #unique txids referenced <= 4,500
@@ -2161,6 +2167,7 @@ bool CBlock::CheckBlock(CValidationState &state, bool fCheckPOW, bool fCheckMerk
         if (nTxids > 4500)
             return error("CheckBlock() : 15 August maxlocks violation");
     }
+*/
 
     // Check proof of work matches claimed amount
     if (fCheckPOW && !CheckProofOfWork(GetPoWHash(), nBits))
