@@ -43,6 +43,7 @@
     </qresource>
     <qresource prefix="/images">
         <file alias="logo">res/images/logo.png</file>
+        <file alias="background">res/images/background.png</file>
         <file alias="about">res/images/about.png</file>
         <file alias="splash">res/images/splash.png</file>
         <file alias="splash_testnet">res/images/splash_testnet.png</file>
