@@ -226,6 +226,9 @@
            <property name="toolTip">
             <string> Click to go to Emerald Home page. </string>
            </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgba(255, 255, 255, 2);</string>
+           </property>
            <property name="icon">
             <iconset resource="../bitcoin.qrc">
              <normaloff>:/images/logo</normaloff>:/images/logo</iconset>
@@ -238,23 +241,20 @@
            </property>
           </widget>
          </item>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
         </layout>
-       </item>
-       <item>
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Expanding</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>10</height>
-          </size>
-         </property>
-        </spacer>
        </item>
       </layout>
      </item>
@@ -312,7 +312,7 @@
           <item>
            <widget class="QListView" name="listTransactions">
             <property name="styleSheet">
-             <string notr="true"/>
+             <string notr="true">QListView { background: transparent; }</string>
             </property>
             <property name="frameShape">
              <enum>QFrame::NoFrame</enum>
