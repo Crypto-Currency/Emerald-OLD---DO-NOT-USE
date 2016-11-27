@@ -2339,6 +2339,7 @@ bool CBlock::AcceptBlock(CValidationState &state, CDiskBlockPos *dbp)
         if (pcheckpoint && nHeight < pcheckpoint->nHeight)
             return state.DoS(100, error("AcceptBlock() : forked chain older than last checkpoint (height %d)", nHeight));
 
+/*
         // Reject block.nVersion=1 blocks (mainnet >= 710000, testnet >= 400000)
         if (nVersion < 2)
         {
@@ -2360,6 +2361,7 @@ bool CBlock::AcceptBlock(CValidationState &state, CDiskBlockPos *dbp)
                     return state.DoS(100, error("AcceptBlock() : block height mismatch in coinbase"));
             }
         }
+*/
     }
 
     // Write block to history file
