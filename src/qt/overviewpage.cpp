@@ -131,7 +131,7 @@ OverviewPage::OverviewPage(QWidget *parent) :
 
 void OverviewPage::handleHomeButton()
 {
-  QDesktopServices::openUrl(QUrl("http://EmeraldCrypto.co"));
+  QDesktopServices::openUrl(QUrl("http://EmeraldCrypto.de"));
 }
 
 void OverviewPage::handleTransactionClicked(const QModelIndex &index)
