@@ -66,7 +66,8 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
     prevBlocks(0)
 {
     restoreWindowGeometry();
-    setWindowTitle(tr("Emerald") + " - " + tr("Wallet"));
+    setWindowTitle(tr("Emerald") + " - " + tr("Wallet")+" "+QString::fromStdString(CLIENT_BUILD));
+setStyleSheet("QMainWindow{background-color:rgb(38,139,65)} QToolButton:!hover{background-color:rgb(10,90,32); color:black;border-style:outset; border-width:2px; border-color:darkgrey; border-radius:10px}  QToolButton:hover{background-color:rgb(255,213,132); color:black; border-style: outset; border-width: 2px; border-radius: 10px; border-color: darkgrey} QToolTip {background-color:rgb(255,233,142); color:black; border: 2px solid grey;};color black");
 #ifndef Q_OS_MAC
     QApplication::setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
@@ -87,6 +88,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
 
     // Create application menu bar
     createMenuBar();
+    menuBar()->setNativeMenuBar(false);// menubar on form instead
 
     // Create the toolbars
     createToolBars();

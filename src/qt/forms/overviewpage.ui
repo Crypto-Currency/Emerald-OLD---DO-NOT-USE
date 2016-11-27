@@ -18,17 +18,22 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-
-
+<!--
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{background-color:rgb(0,62,0)};color:rgb(170,225,0);background-color: rgb(0, 62, 0)</string>
+  </property>
+-->
   <layout class="QVBoxLayout" name="topLayout">
    <item>
     <widget class="QLabel" name="labelAlerts">
      <property name="visible">
       <bool>false</bool>
      </property>
+<!--
      <property name="styleSheet">
       <string notr="true">background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop:0 #F0D0A0, stop:1 #F8D488); color:#000000;</string>
      </property>
+-->
      <property name="wordWrap">
       <bool>true</bool>
      </property>
@@ -60,6 +65,11 @@
                 <bold>true</bold>
                </font>
               </property>
+<!--
+              <property name="styleSheet">
+               <string notr="true">color: rgb(170, 255, 0);</string>
+              </property>
+-->
               <property name="text">
                <string>Wallet</string>
               </property>
@@ -232,7 +242,7 @@
             <string> Click to go to Emerald Home page. </string>
            </property>
            <property name="icon">
-             <iconset resource="../bitcoin.qrc">
+            <iconset>
              <normaloff>:/images/logo</normaloff>:/images/logo</iconset>
            </property>
            <property name="iconSize">
