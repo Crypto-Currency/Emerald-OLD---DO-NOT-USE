@@ -226,9 +226,6 @@
            <property name="toolTip">
             <string> Click to go to Emerald Home page. </string>
            </property>
-           <property name="styleSheet">
-            <string notr="true">color: rgba(255, 255, 255, 2);</string>
-           </property>
            <property name="icon">
             <iconset resource="../bitcoin.qrc">
              <normaloff>:/images/logo</normaloff>:/images/logo</iconset>

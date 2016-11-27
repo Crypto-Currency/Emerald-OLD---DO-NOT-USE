@@ -67,10 +67,10 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
 {
     restoreWindowGeometry();
     setWindowTitle(tr("Emerald") + " - " + tr("Wallet")+" "+QString::fromStdString(CLIENT_BUILD));
-//setStyleSheet("QMainWindow{background-color:rgb(38,139,65)} QToolButton:!hover{background-color:rgb(10,90,32); color:black;border-style:outset; border-width:2px; border-color:darkgrey; border-radius:10px}  QToolButton:hover{background-color:rgb(255,213,132); color:black; border-style: outset; border-width: 2px; border-radius: 10px; border-color: darkgrey} QToolTip {background-color:rgb(255,233,142); color:black; border: 2px solid grey;};color black");
+setStyleSheet("QMainWindow{border-image: url(:/images/background) 0 0 0 0 stretch stretch} QPushButton{background-color: rgba(255,255,255,0);} QToolButton:!hover{background-color:rgb(10,90,32); color:black;border-style:outset; border-width:2px; border-color:darkgrey; border-radius:10px}  QToolButton:hover{background-color:rgb(102,215,167); color:black; border-style: outset; border-width: 2px; border-radius: 10px; border-color: darkgrey} QToolTip {background-color:rgb(255,233,142); color:black; border: 2px solid grey;};color black");
 
 //setStyleSheet("border-image: url(:images/background) 0 0 0 0 stretch stretch;");// maybe
-setStyleSheet("QMainWindow{border-image: url(:/images/background)  0 0 0 0 stretch stretch;}");
+//setStyleSheet("QMainWindow{border-image: url(:/images/background)  0 0 0 0 stretch stretch;} QPushButton{background-color: rgba(255, 255, 255, 0);}");
 #ifndef Q_OS_MAC
     QApplication::setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
