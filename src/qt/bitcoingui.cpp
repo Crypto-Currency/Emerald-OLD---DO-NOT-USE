@@ -67,7 +67,10 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
 {
     restoreWindowGeometry();
     setWindowTitle(tr("Emerald") + " - " + tr("Wallet")+" "+QString::fromStdString(CLIENT_BUILD));
-setStyleSheet("QMainWindow{background-color:rgb(38,139,65)} QToolButton:!hover{background-color:rgb(10,90,32); color:black;border-style:outset; border-width:2px; border-color:darkgrey; border-radius:10px}  QToolButton:hover{background-color:rgb(255,213,132); color:black; border-style: outset; border-width: 2px; border-radius: 10px; border-color: darkgrey} QToolTip {background-color:rgb(255,233,142); color:black; border: 2px solid grey;};color black");
+//setStyleSheet("QMainWindow{background-color:rgb(38,139,65)} QToolButton:!hover{background-color:rgb(10,90,32); color:black;border-style:outset; border-width:2px; border-color:darkgrey; border-radius:10px}  QToolButton:hover{background-color:rgb(255,213,132); color:black; border-style: outset; border-width: 2px; border-radius: 10px; border-color: darkgrey} QToolTip {background-color:rgb(255,233,142); color:black; border: 2px solid grey;};color black");
+
+setStyleSheet("QMainWindow{background-color:rgb(170,234,169)} QToolButton:!hover{background-color:rgb(10,90,32); color:black;border-style:outset; border-width:2px; border-color:darkgrey; border-radius:10px}  QToolButton:hover{background-color:rgb(255,213,132); color:black; border-style: outset; border-width: 2px; border-radius: 10px; border-color: darkgrey} QToolTip {background-color:rgb(255,233,142); color:black; border: 2px solid grey;};color black");
+
 #ifndef Q_OS_MAC
     QApplication::setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
@@ -134,7 +137,9 @@ setStyleSheet("QMainWindow{background-color:rgb(38,139,65)} QToolButton:!hover{b
         progressBar->setStyleSheet("QProgressBar { background-color: #e8e8e8; border: 1px solid grey; border-radius: 7px; padding: 1px; text-align: center; } QProgressBar::chunk { background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #FF8000, stop: 1 orange); border-radius: 7px; margin: 0px; }");
     }
 
-    statusBar()->setStyleSheet("QStatusBar{background-color:rgb(38,139,65)}QToolTip {background-color:rgb(255,233,142); color:black; border: 2px solid grey;}");
+//    statusBar()->setStyleSheet("QStatusBar{background-color:rgb(38,139,65)}QToolTip {background-color:rgb(255,233,142); color:black; border: 2px solid grey;}");
+
+    statusBar()->setStyleSheet("QStatusBar{background-color:rgb(170,234,169)}QToolTip {background-color:rgb(255,233,142); color:black; border: 2px solid grey;}");
 
     statusBar()->addWidget(progressBarLabel);
     statusBar()->addWidget(progressBar);
