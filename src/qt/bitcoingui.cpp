@@ -139,7 +139,7 @@ setStyleSheet("QMainWindow{border-image: url(:/images/background) 0 0 0 0 stretc
 
 //    statusBar()->setStyleSheet("QStatusBar{background-color:rgb(38,139,65)}QToolTip {background-color:rgb(255,233,142); color:black; border: 2px solid grey;}");
 
-//    statusBar()->setStyleSheet("QStatusBar{background-color:rgb(170,234,169)}QToolTip {background-color:rgb(255,233,142); color:black; border: 2px solid grey;}");
+    statusBar()->setStyleSheet("QStatusBar{background-color:rgb(102,215,167)}QToolTip {background-color:rgb(102,215,167); color:black; border: 2px solid grey;}");
 
     statusBar()->addWidget(progressBarLabel);
     statusBar()->addWidget(progressBar);
