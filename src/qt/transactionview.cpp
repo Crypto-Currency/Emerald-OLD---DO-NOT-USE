@@ -171,6 +171,11 @@ void TransactionView::setModel(WalletModel *model)
 
         transactionView->setModel(transactionProxyModel);
         transactionView->setAlternatingRowColors(true);
+
+//        transactionView->setStyleSheet("QTableView{alternate-background-color: rgba(90,90,90,50); background-color: rgba(200,200,200,a); selection-background-color: rgba(200,100,0,50);} QHeaderView::section{ background-color:rgba(10,10,10,50); color:white;}");
+
+        transactionView->setStyleSheet("background-color: rgba(90,90,90,0); QTableView{alternate-background-color: rgba(90,90,90,50); background-color: rgba(200,200,200,50); selection-background-color: rgba(200,100,0,50); color white;} ::section{ background-color:rgba(10,10,10,50); color:white;}");
+
         transactionView->setSelectionBehavior(QAbstractItemView::SelectRows);
         transactionView->setSelectionMode(QAbstractItemView::ExtendedSelection);
         transactionView->setSortingEnabled(true);
