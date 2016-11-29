@@ -579,6 +579,9 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(0, 170, 0, 50);</string>
+            </property>
            </widget>
           </item>
           <item>

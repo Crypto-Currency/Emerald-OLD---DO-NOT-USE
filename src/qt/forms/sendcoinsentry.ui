@@ -10,6 +10,11 @@
     <height>136</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>Ubuntu</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
@@ -50,7 +55,12 @@
     </widget>
    </item>
    <item row="5" column="1">
-    <widget class="BitcoinAmountField" name="payAmount"/>
+    <widget class="BitcoinAmountField" name="payAmount">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(102,215,167, 100);
+selection-background-color: rgba(0, 150, 0, 200);</string>
+       </property>
+    </widget>
    </item>
    <item row="4" column="0">
     <widget class="QLabel" name="label_4">
@@ -74,6 +84,10 @@
       <widget class="QValidatedLineEdit" name="payTo">
        <property name="toolTip">
         <string>The address to send the payment to (e.g. Es4vLXAEc5CrWLvqT9HAZyJMmH872UFDYz)</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(102,215,167, 100);
+selection-background-color: rgba(0, 150, 0, 200);</string>
        </property>
        <property name="maxLength">
         <number>34</number>
@@ -135,6 +149,10 @@
      <property name="toolTip">
       <string>Enter a label for this address to add it to your address book</string>
      </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(102,215,167, 100);
+selection-background-color: rgba(0, 150, 0, 200);</string>
+       </property>
     </widget>
    </item>
   </layout>
