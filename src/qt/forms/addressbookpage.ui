@@ -18,16 +18,24 @@
   <property name="windowTitle">
    <string>Address Book</string>
   </property>
+<!--
   <property name="styleSheet">
    <string notr="true">QWidget{border-image: url(:/images/background) 0 0 0 0 stretch stretch;}
 QPushButton{border-image: url('');};</string>
   </property>
+-->
+<!--  <property name="styleSheet">
+   <string notr="true">QWidget{border-image: url(:/images/background) 0 0 0 0 stretch stretch;};</string>
+  </property>
+-->
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="labelExplanation">
+<!--
      <property name="styleSheet">
       <string notr="true">border-image: url('');</string>
      </property>
+-->
      <property name="textFormat">
       <enum>Qt::PlainText</enum>
      </property>

@@ -77,14 +77,13 @@ QToolButton:hover{background-color:rgb(102,215,167); border-style: outset; borde
 QToolTip {background-color:rgb(102,215,167); border: 2px solid grey;}\
 QTableView{alternate-background-color: rgba(90,90,90,50); background-color: rgba(200,200,200,50); selection-background-color: rgb(200,100,0); color red;}\
 QHeaderView::section{background-color:rgba(10,10,10,50); color:white;}\
-QAbstractTableModel::section{border-image: url('');};\
-QAbstractTableModel{border-image: url('');};\
-AddressTableModel::section{border-image: url('');};\
-QLabel{border-image: url('');}\
-QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 darkgreen,stop: 1 green;border-radius:7px;padding:1px; );}\
+QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 green,stop: 1 green;border-radius:7px;padding:1px; );}\
 QProgressBar{background-color: rgb(132,245,207);border: 1px solid grey;border-radius: 7px;padding: 1px; text-align: center;}\
 QLineEdit{background-color:rgba(102,215,167, 100);selection-background-color: rgba(0, 150, 0, 200);}\
 ");
+
+//QList{border-image: url('');};\
+QLabel{border-image: url('');}\
 
 //QProgressBar::chunk{background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 darkgreen, stop: 1 green); border-radius: 7px; margin: 0px;}\
 
