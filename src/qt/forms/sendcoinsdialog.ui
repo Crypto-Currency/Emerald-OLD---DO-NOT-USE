@@ -22,14 +22,9 @@
   <property name="styleSheet">
    <string notr="true">background:transparent;</string>
   </property>
--->
 <property name="styleSheet">
 <string notr="true">background-color:rgb(202,255,227)</string>
 </property>
-
-<!--     <property name="styleSheet">
-      <string notr="true">background-color: rgb(202,255,227);color: black;}</string>
-     </property>
 -->
   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1,0">
    <property name="bottomMargin">
@@ -590,9 +585,11 @@
              </sizepolicy>
             </property>
 
+<!--
             <property name="styleSheet">
              <string notr="true">background-color:rgba(0, 170, 0, 50);</string>
             </property>
+-->
            </widget>
           </item>
           <item>

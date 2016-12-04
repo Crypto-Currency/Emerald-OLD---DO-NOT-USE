@@ -68,9 +68,13 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
     restoreWindowGeometry();
     setWindowTitle(tr("Emerald") + " - " + tr("Wallet")+" "+QString::fromStdString(CLIENT_BUILD));
 
+
+//setStyleSheet("QMainWindow{border-image: url(:/images/background) 0 0 0 0 stretch stretch;}\
+");
+
 //setStyleSheet("QMainWindow{border-image: url(:/images/background) 0 0 0 0 stretch stretch} QPushButton{background-color: rgba(255,255,255,0);} QToolButton:!hover{background-color:rgb(102,215,167); color:black;border-style:outset; border-width:2px; border-color:darkgrey; border-radius:10px}  QToolButton:hover{background-color:rgb(102,215,167); color:black; border-style: outset; border-width: 2px; border-radius: 10px; border-color: darkgrey} QToolTip {background-color:rgb(255,233,142); color:black; border: 2px solid grey;};color black");
 
-setStyleSheet("QMainWindow{border-image: url(:/images/background) 0 0 0 0 stretch stretch;}\
+//setStyleSheet("QMainWindow{border-image: url(:/images/background) 0 0 0 0 stretch stretch;}\
 QPushButton{background-color: rgba(255,255,255,0);}\
 QToolButton:!hover{background-color:rgb(102,215,167); border-style:outset; border-width:2px; border-color:darkgrey; border-radius:10px;}\
 QToolButton:hover{background-color:rgb(102,215,167); border-style: outset; border-width: 2px; border-radius: 10px; border-color: darkgrey;}\
@@ -153,13 +157,19 @@ QLabel{border-image: url('');}\
 //    {
 //        progressBar->setStyleSheet("QProgressBar { background-color: rgb(102,215,167); border: 1px solid darkgreen; border-radius: 7px; padding: 1px; text-align: center; } QProgressBar::chunk { background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #80ff00, stop: 1 green); border-radius: 7px; margin: 0px; }");
 //    }
+
 progressBar->setStyleSheet("QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 darkgreen,stop: 1 lightgreen);border-radius:7px;padding:1px;}\
+QProgressBar{border: 1px solid grey;border-radius: 7px;padding: 1px; text-align: center;}");
+
+
+//good one
+//progressBar->setStyleSheet("QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 darkgreen,stop: 1 lightgreen);border-radius:7px;padding:1px;}\
 QProgressBar{background-color: rgb(132,245,207);border: 1px solid grey;border-radius: 7px;padding: 1px; text-align: center;}");
 
 //    statusBar()->setStyleSheet("QStatusBar{background-color:rgb(38,139,65)}QToolTip {background-color:rgb(255,233,142); color:black; border: 2px solid grey;}");
 
-
-    statusBar()->setStyleSheet("QStatusBar{background-color:rgb(102,215,167)}QToolTip {background-color:rgb(102,215,167); color:black; border: 2px solid grey;}");
+//good one
+//    statusBar()->setStyleSheet("QStatusBar{background-color:rgb(102,215,167)}QToolTip {background-color:rgb(102,215,167); color:black; border: 2px solid grey;}");
 
     statusBar()->addWidget(progressBarLabel);
     statusBar()->addWidget(progressBar);
