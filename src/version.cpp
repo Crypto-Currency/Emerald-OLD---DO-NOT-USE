@@ -37,7 +37,7 @@ const std::string CLIENT_NAME("Emerald");
 #define GIT_ARCHIVE 1
 #ifdef GIT_ARCHIVE
 #    define GIT_COMMIT_ID "9cffb23"
-#    define GIT_COMMIT_DATE "Dec. 01 2016"
+#    define GIT_COMMIT_DATE "Dec. 04 2016"
 #endif
 
 #define BUILD_DESC_FROM_COMMIT(maj,min,rev,build,commit) \
@@ -45,6 +45,9 @@ const std::string CLIENT_NAME("Emerald");
 
 #define BUILD_DESC_FROM_UNKNOWN(maj,min,rev,build) \
     "v" DO_STRINGIZE(maj) "." DO_STRINGIZE(min) "." DO_STRINGIZE(rev) "." DO_STRINGIZE(build) "-unk"
+
+#define BUILD_DESC_FROM_version(maj,min,rev,build) \
+    "V" DO_STRINGIZE(maj) "." DO_STRINGIZE(min) "." DO_STRINGIZE(rev) "." DO_STRINGIZE(build)
 
 #ifndef BUILD_DESC
 #    ifdef GIT_COMMIT_ID
@@ -61,6 +64,9 @@ const std::string CLIENT_NAME("Emerald");
 #        define BUILD_DATE __DATE__ ", " __TIME__
 #    endif
 #endif
+#  define BUILD_version BUILD_DESC_FROM_version(CLIENT_VERSION_MAJOR, CLIENT_VERSION_MINOR, CLIENT_VERSION_REVISION, CLIENT_VERSION_BUILD)
 
+
+const std::string version(BUILD_version);
 const std::string CLIENT_BUILD(BUILD_DESC CLIENT_VERSION_SUFFIX);
 const std::string CLIENT_DATE(BUILD_DATE);
