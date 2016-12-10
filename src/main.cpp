@@ -3395,10 +3395,23 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
             pfrom->nVersion = 300;
         if (!vRecv.empty())
             vRecv >> addrFrom >> nNonce;
-        if (!vRecv.empty()) {
-            vRecv >> pfrom->strSubVer;
-            pfrom->cleanSubVer = SanitizeString(pfrom->strSubVer);
+        if (!vRecv.empty())
+        {
+          vRecv >> pfrom->strSubVer;
+          pfrom->cleanSubVer = SanitizeString(pfrom->strSubVer);
+          printf("peer connecting subver is %s",pfrom->strSubVer.c_str());
+          // check if 'Emerald' or '8.6.1' is in the sub version string
+          int iSubVer=pfrom->strSubVer.find("Emerald");
+          iSubVer=iSubVer + pfrom->strSubVer.find("8.6.1");
+          if(iSubVer < 0)
+          {
+            printf("  -  disconnecting .....\n");
+            pfrom->fDisconnect = true;
+            return false;
+          }
+          printf("\n");
         }
+
         if (!vRecv.empty())
             vRecv >> pfrom->nStartingHeight;
         if (!vRecv.empty())
