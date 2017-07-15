@@ -165,12 +165,6 @@ void OverviewPage::setBalance(qint64 balance, qint64 unconfirmedBalance, qint64 
 void OverviewPage::setClientModel(ClientModel *model)
 {
     this->clientModel = model;
-    if(model)
-    {
-        // Show warning if this is a prerelease version
-        connect(model, SIGNAL(alertsChanged(QString)), this, SLOT(updateAlerts(QString)));
-        updateAlerts(model->getStatusBarWarnings());
-    }
 }
 
 void OverviewPage::setWalletModel(WalletModel *model)
@@ -212,12 +206,6 @@ void OverviewPage::updateDisplayUnit()
 
         ui->listTransactions->update();
     }
-}
-
-void OverviewPage::updateAlerts(const QString &warnings)
-{
-    this->ui->labelAlerts->setVisible(!warnings.isEmpty());
-    this->ui->labelAlerts->setText(warnings);
 }
 
 void OverviewPage::showOutOfSyncWarning(bool fShow)
