@@ -68,6 +68,30 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
     restoreWindowGeometry();
     setWindowTitle(tr("Emerald") + " - " + tr("Wallet")+" "+QString::fromStdString(CLIENT_BUILD));
 
+
+//setStyleSheet("QMainWindow{border-image: url(:/images/background) 0 0 0 0 stretch stretch;}\
+");
+
+//setStyleSheet("QMainWindow{border-image: url(:/images/background) 0 0 0 0 stretch stretch} QPushButton{background-color: rgba(255,255,255,0);} QToolButton:!hover{background-color:rgb(102,215,167); color:black;border-style:outset; border-width:2px; border-color:darkgrey; border-radius:10px}  QToolButton:hover{background-color:rgb(102,215,167); color:black; border-style: outset; border-width: 2px; border-radius: 10px; border-color: darkgrey} QToolTip {background-color:rgb(255,233,142); color:black; border: 2px solid grey;};color black");
+
+//setStyleSheet("QMainWindow{border-image: url(:/images/background) 0 0 0 0 stretch stretch;}\
+QPushButton{background-color: rgba(255,255,255,0);}\
+QToolButton:!hover{background-color:rgb(102,215,167); border-style:outset; border-width:2px; border-color:darkgrey; border-radius:10px;}\
+QToolButton:hover{background-color:rgb(102,215,167); border-style: outset; border-width: 2px; border-radius: 10px; border-color: darkgrey;}\
+QToolTip {background-color:rgb(102,215,167); border: 2px solid grey;color:black;}\
+QMenu{padding: 2px 10px 2px 10px;border:2px solid grey;background-color:rgb(202,255,227);}\
+QMenu::item:selected{background-color:rgb(2,115,67);color white;}\
+QTableView{alternate-background-color: rgba(90,90,90,50); background-color: rgba(200,200,200,50); selection-background-color: rgb(200,100,0); color red;}\
+QHeaderView::section{background-color:rgba(10,10,10,50); color:white;}\
+QLineEdit{background-color:rgba(102,215,167, 100);selection-background-color: rgba(0, 150, 0, 200);}\
+");
+
+//QList{border-image: url('');};\
+QLabel{border-image: url('');}\
+
+//QProgressBar::chunk{background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 darkgreen, stop: 1 green); border-radius: 7px; margin: 0px;}\
+
+
 #ifndef Q_OS_MAC
     QApplication::setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
@@ -128,8 +152,24 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
     // Override style sheet for progress bar for styles that have a segmented progress bar,
     // as they make the text unreadable (workaround for issue #1071)
     // See https://qt-project.org/doc/qt-4.8/gallery.html
+//    QString curStyle = QApplication::style()->metaObject()->className();
+//    if(curStyle == "QWindowsStyle" || curStyle == "QWindowsXPStyle")
+//    {
+//        progressBar->setStyleSheet("QProgressBar { background-color: rgb(102,215,167); border: 1px solid darkgreen; border-radius: 7px; padding: 1px; text-align: center; } QProgressBar::chunk { background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #80ff00, stop: 1 green); border-radius: 7px; margin: 0px; }");
+//    }
+
 progressBar->setStyleSheet("QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 darkgreen,stop: 1 lightgreen);border-radius:7px;padding:1px;}\
 QProgressBar{border: 1px solid grey;border-radius: 7px;padding: 1px; text-align: center;}");
+
+
+//good one
+//progressBar->setStyleSheet("QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 darkgreen,stop: 1 lightgreen);border-radius:7px;padding:1px;}\
+QProgressBar{background-color: rgb(132,245,207);border: 1px solid grey;border-radius: 7px;padding: 1px; text-align: center;}");
+
+//    statusBar()->setStyleSheet("QStatusBar{background-color:rgb(38,139,65)}QToolTip {background-color:rgb(255,233,142); color:black; border: 2px solid grey;}");
+
+//good one
+//    statusBar()->setStyleSheet("QStatusBar{background-color:rgb(102,215,167)}QToolTip {background-color:rgb(102,215,167); color:black; border: 2px solid grey;}");
 
     statusBar()->addWidget(progressBarLabel);
     statusBar()->addWidget(progressBar);

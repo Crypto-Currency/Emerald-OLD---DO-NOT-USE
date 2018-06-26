@@ -92,7 +92,7 @@ Value getinfo(const Array& params, bool fHelp)
     obj.push_back(Pair("mininput",      ValueFromAmount(nMinimumInputValue)));
     if (pwalletMain && pwalletMain->IsCrypted())
         obj.push_back(Pair("unlocked_until", (boost::int64_t)nWalletUnlockTime));
-//    obj.push_back(Pair("errors",        GetWarnings("statusbar")));
+    obj.push_back(Pair("errors",        GetWarnings("statusbar")));
     return obj;
 }
 

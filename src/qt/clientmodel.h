@@ -85,6 +85,7 @@ signals:
 public slots:
     void updateTimer();
     void updateNumConnections(int numConnections);
+    void updateAlert(const QString &hash, int status);
 };
 
 #endif // CLIENTMODEL_H

@@ -1,7 +1,7 @@
 Emerald integration/staging tree
 ================================
 
-http://EmeraldCrypto.de
+https://www.EmeraldCrypto.de
 
 Copyright (c) 2009-2014 Bitcoin Developers
 Copyright (c) 2011-2014 Litecoin Developers
@@ -12,24 +12,28 @@ What is Emerald?
 
 Emerald - a fork of Litecoin. Like Litecoin it uses scrypt as a proof of work scheme.
 
-	- Total coins will be 31,499,000.
+	- Total coins will be 32,000,000.
 	- 20 seconds block target
-	- Difficulty retargets every hour* (see hardfork info below)
-	- 5 emerald per block, halves every 2 block years (3,110,400 blocks)
+	- Difficulty retargets every block *
+	- 0.1 emerald per block, halves every 6 months
 	- transaction 3 confirmations, which average 1 min.
-	- Start 0 emeralds for the first 400 blocks (except 1st block which is used for bounty etc), then 300 blocks each for 1, 2, 3 and 4 emeralds. Starting block 1601 will be 5 emeralds per block. This is to ensure fair start.
 	- The default ports are 12127(connect) and 12128(json rpc).
 	
 ---------
 
-Hardfork at block 1600000 to implement Dark Gravity Wave 3. Difficulty will retarget every block instead of 180. 
+* Hardfork at block 1600000 to implement Dark Gravity Wave 3. Difficulty will retarget every block instead of 180. 
 
+0.8.7.7
 New checkpoint added.
+New alert system keys added.
+Alert system reactivated.
+new DNS seed nodes
+
 
 
 
 For more information, as well as an immediately useable, binary version of
-the Emerald client sofware, see http://EmeraldCrypto.de
+the Emerald client sofware, see https://www.EmeraldCrypto.de
 
 License
 -------
