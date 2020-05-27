@@ -28,7 +28,7 @@ using namespace std;
 using namespace boost;
 
 // static const int MAX_OUTBOUND_CONNECTIONS = 36;
-static const int MAX_OUTBOUND_CONNECTIONS = 8;
+static const int MAX_OUTBOUND_CONNECTIONS = 16;
 
 bool OpenNetworkConnection(const CAddress& addrConnect, CSemaphoreGrant *grantOutbound = NULL, const char *strDest = NULL, bool fOneShot = false);
 
@@ -53,7 +53,7 @@ uint64 nLocalHostNonce = 0;
 static std::vector<SOCKET> vhListenSocket;
 CAddrMan addrman;
 // int nMaxConnections = 125;
-int nMaxConnections = 8;
+int nMaxConnections = 16;
 
 vector<CNode*> vNodes;
 CCriticalSection cs_vNodes;
