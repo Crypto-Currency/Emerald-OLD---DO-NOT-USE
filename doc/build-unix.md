@@ -46,7 +46,7 @@ Licenses of statically linked libraries:
 
 - Versions used in this release:
 -  GCC           7.5.0
--  OpenSSL       1.1.1
+-  OpenSSL       1.0.2n
 -  Berkeley DB   4.8.30.NC
 -  Boost         1.65
 -  miniupnpc     1.9
@@ -60,6 +60,7 @@ Build requirements:
 
 for Ubuntu 18.04:
 
+	sudo apt-get install libssl1.0-dev
 	sudo apt-get install libboost-all-dev
 
  db4.8 packages are available [here](https://launchpad.net/~bitcoin/+archive/bitcoin).
