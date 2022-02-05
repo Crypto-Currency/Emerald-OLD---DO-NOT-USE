@@ -10,3 +10,10 @@ src/emeraldd
 
 # others
 *orig
+
+### qt source executable build
+build/
+src/qt/
+emerald-qt
+Makefile
+qrc_bitcoin.cpp
