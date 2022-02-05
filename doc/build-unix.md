@@ -22,7 +22,7 @@ Dependencies
  Library     Purpose           Description
  -------     -------           -----------
  libssl      SSL Support       Secure communications
- libdb4.8    Berkeley DB       Blockchain & wallet storage
+ libdb5.3    Berkeley DB       Blockchain & wallet storage
  libboost    Boost             C++ Library
  miniupnpc   UPnP Support      Optional firewall-jumping support
 
@@ -45,11 +45,11 @@ Licenses of statically linked libraries:
  miniupnpc     New (3-clause) BSD license
 
 - Versions used in this release:
--  GCC           4.3.3
--  OpenSSL       1.0.1c
+-  GCC           7.5.0
+-  OpenSSL       1.1.1
 -  Berkeley DB   4.8.30.NC
--  Boost         1.37
--  miniupnpc     1.6
+-  Boost         1.65
+-  miniupnpc     1.9
 
 Dependency Build Instructions: Ubuntu & Debian
 ----------------------------------------------
@@ -58,19 +58,17 @@ Build requirements:
 	sudo apt-get install build-essential
 	sudo apt-get install libssl-dev
 
-for Ubuntu 12.04:
+for Ubuntu 18.04:
 
 	sudo apt-get install libboost-all-dev
 
  db4.8 packages are available [here](https://launchpad.net/~bitcoin/+archive/bitcoin).
 
- Ubuntu precise has packages for libdb5.1-dev and libdb5.1++-dev,
- but using these will break binary wallet compatibility, and is not recommended.
-
 for other Ubuntu & Debian:
 
-	sudo apt-get install libdb4.8-dev
-	sudo apt-get install libdb4.8++-dev
+	sudo apt-get install libdb5.3-dev
+	sudo apt-get install libdb5.3++-dev
+
 	sudo apt-get install libboost1.37-dev
  (If using Boost 1.37, append -mt to the boost libraries in the makefile)
 
@@ -81,7 +79,7 @@ Optional:
 
 Notes
 -----
-The release is built with GCC and then "strip bitcoind" to strip the debug
+The release is built with GCC and then "strip emeraldd" to strip the debug
 symbols, which reduces the executable size by about 90%.
 
 

@@ -1,34 +1,12 @@
-src/*.exe
-src/litecoin
-src/litecoind
-src/test_litecoin
-.*.swp
-*.*~*
-*.bak
-*.rej
-*.orig
-*.o
-*.patch
-.litecoin
+# Logs
+logs
+*.log
 
-# Compilation and Qt preprocessor part
-*.qm
-Makefile
-litecoin-qt
-Emerald-Qt.app
+# local configuration
+emerald.conf
 
-# Unit-tests
-Makefile.test
-litecoin-qt_test
+# binaries
+src/emeraldd
 
-# Resources cpp
-qrc_*.cpp
-
-# Qt creator
-*.pro.user
-
-# Mac specific
-.DS_Store
-build
-
-!src/leveldb*/Makefile
+# others
+*orig
