@@ -23,11 +23,9 @@ Emerald - a fork of Litecoin. Like Litecoin it uses scrypt as a proof of work sc
 
 * Hardfork at block 1600000 to implement Dark Gravity Wave 3. Difficulty will retarget every block instead of 180. 
 
-0.8.7.7
+0.8.7.8
+Some updates in documentation
 New checkpoint added.
-New alert system keys added.
-Alert system reactivated.
-new DNS seed nodes
 
 
 
