@@ -51,8 +51,7 @@ static CNode* pnodeSync = NULL;
 uint64 nLocalHostNonce = 0;
 static std::vector<SOCKET> vhListenSocket;
 CAddrMan addrman;
-// int nMaxConnections = 125;
-int nMaxConnections = 16;
+int nMaxConnections = 125;
 
 vector<CNode*> vNodes;
 CCriticalSection cs_vNodes;
